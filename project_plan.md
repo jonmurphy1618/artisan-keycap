@@ -61,7 +61,7 @@ The Work Breakdown Structure presented here represents all the work required to 
 Project team directory for all communications is:
 
 |Name	|Title	|Email	|Other	|
-|---|---|---|---|---|
+|---|---|---|---|
 |Jon Murphy	|Project Owner	|me@jonmurphy.info	|git: jonmurphy1618	|
 
 
