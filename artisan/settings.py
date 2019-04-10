@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'artisan.spiders'
 #USER_AGENT = 'artisan (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -64,9 +64,13 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
+ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
 #    'artisan.pipelines.ArtisanPipeline': 300,
-#}
+
+# Configure image storage
+# https://docs.scrapy.org/en/latest/topics/media-pipeline.html#topics-media-pipeline-enabling
+FILES_STORE = './output'
+#MEDIA_ALLOW_REDIRECTS = True
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

@@ -1,3 +1,21 @@
+## 190410
+- switches from scrapy image downloader to file downloader. files are now downloading
+- some of the links need to be repaired. only full https image links are downloaded but reddit links don't always include domain
+- 
+
+## 190409
+- back from vacation. need to review project progess and outstanding items
+- 19 days of digital ocean credit remaining
+- current status: scrapy will pull data from the webpage and store to a json file after a manually typed command
+- outstanding: download image, process the color, add the color tag relation to the image, create website
+- updated schedule: download image and process color due 4/12; add the color tag relation and fully automate due 4/19; create website due 4/26; server shutdown 4/28
+- documention will suffer, folder organization will suffer, automation will suffer, no longer able to include additional websites like instagram
+- failed to get scrapy image downloading to work
+
+## VACATION BREAK!!!!!
+##
+##
+
 ## 190308
 - setup github repo with plans to self host with gitea in the future
 - need to do documentation today. need a readme, change file formats to markdown, need week 1 report

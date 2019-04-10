@@ -12,3 +12,9 @@ class ArtisanItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+class FileItem(scrapy.Item):
+    file_urls = scrapy.Field()
+    files = scrapy.Field()
+    author = scrapy.Field()
+    title = scrapy.Field()
