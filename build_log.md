@@ -1,7 +1,13 @@
+## 190416
+- color filtering for images is much more comlicated than assumed
+- best approach seems to be k-means clustering similar to this: http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/
+- my approach for simplicity sake is using HSL color values and counting each pixel
+- the website filter can then select between about a dozen colors and the 'strength' of the color
+
+
 ## 190410
 - switches from scrapy image downloader to file downloader. files are now downloading
 - some of the links need to be repaired. only full https image links are downloaded but reddit links don't always include domain
-- 
 
 ## 190409
 - back from vacation. need to review project progess and outstanding items
