@@ -1,9 +1,55 @@
+## 190426
+- server is out of time
+- moving the webserver and html/css/js to the github folder
+
+## 190425
+- testing phone remote setup while at work meetings
+- meh, not much time for working. maybe if i find somewhere closer to eat
+- need to install mosh, setup keyboard shortcuts 
+
+## 190424
+- attempting to filter today
+- also need to format the data into something usable today instead of just <p>
+- success at filtering!! got filtering to work with static HTML code. 
+- todo queryselect based on color values
+- todo fix the colorscanner script to add zero values if the image fails
+- https://stackoverflow.com/questions/2613648/jquery-selecting-all-elements-where-attribute-is-greater-than-a-value
+
+## 190423
+- success at full json import into html
+- success at formatting the code into something readable
+- jquery could use clone() but is not implemeneted at this time
+- todo color processing script needs to add zero values if the image fails
+- failed at filtering so far, seems like a few options and it's possible
+- http://fofwebdesign.co.uk/template/_testing/filter/filter-multi-js.htm
+- https://codepen.io/kvana/pen/LLJmZb
+
+## 190419
+- docker run -d --mount type=bind,source="$(pwd)"/www,target=/srv -p 2019:2015 abiosoft/caddy
+- above command allows for editing the index and viewing changes immediately
+- json is loaded into javascript using ajax
+- images and titles are displayed from the json file
+- the code is very messy....
+- need to find a cleaner approach and tag the images with their color values
+- the javascript to select images based on color tag info can be done later
+
+## 190418
+- after reading about a bunch of frontend frameworks and software, a basic javascript, css, html page should suffice but i'm not sure
+- considered MEAN, react, bootstrap. they all seem like overkill for a single dynamic page that pulls info from a json
+- setup the docker for Caddy webhosting
+- docker run -d -v $(pwd)/www:/srv -p 2019:2015 abiosoft/caddy
+- the defaults ports 80 and 2015 don't work with docker -p 2015:2015 but changing to above command works
+- need to update github and start working on the html css javascript
+- https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
+- https://github.com/abiosoft/caddy-docker/blob/master/Dockerfile
+
 ## 190416
 - color filtering for images is much more comlicated than assumed
 - best approach seems to be k-means clustering similar to this: http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/
 - my approach for simplicity sake is using HSL color values and counting each pixel
 - the website filter can then select between about a dozen colors and the 'strength' of the color
-
+- HSL color filter example: https://stackoverflow.com/questions/25943927/search-images-by-color-in-python
+- success!!! python script for scanning the image and saving color values to the json file
 
 ## 190410
 - switches from scrapy image downloader to file downloader. files are now downloading

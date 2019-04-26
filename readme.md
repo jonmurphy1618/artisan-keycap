@@ -13,6 +13,7 @@ The following command will launch the scraper and host as a docker background pr
 - Docker
 - PyPy
 - Scrapy
+- PIL
 
 # License
 This project is licensed under the MIT License.

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+</head>
+
+<title>Artisan Macro Sort</title>
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('none')"> None</button>
+  <button class="btn" onclick="filterSelection('white')"> White</button>
+  <button class="btn" onclick="filterSelection('black')"> Black</button>
+  <button class="btn" onclick="filterSelection('gray')"> Gray</button>
+  <button class="btn" onclick="filterSelection('red')"> Red</button>
+  <button class="btn" onclick="filterSelection('orange')"> Orange</button>
+  <button class="btn" onclick="filterSelection('brown')"> Brown</button>
+  <button class="btn" onclick="filterSelection('yellow')"> Yellow</button>
+  <button class="btn" onclick="filterSelection('green')"> Green</button>
+  <button class="btn" onclick="filterSelection('turquoise')"> Turquoise</button>
+  <button class="btn" onclick="filterSelection('blue')"> Blue</button>
+  <button class="btn" onclick="filterSelection('lilac')"> Lilac</button>
+  <button class="btn" onclick="filterSelection('pink')"> Pink</button>
+</div>
+
+
+<!--
+<div class="filter-all">
+  <div data-filter-white=71>
+  <div data-filter-
+    <img src="link" alt="title"></img>
+</div>
+-->
+
+<div class="filter-all" data-filter-white=71>
+    <img src="https://i.imgur.com/VrGH7IW.jpg" alt="title" style="height: 200px"></img>
+</div>
+
+<div class="filter-all" data-filter-black=80>
+    <img src="https://i.imgur.com/gexhRqf.jpg" alt="title2" style="height: 200px"></img>
+</div>
+
+<div id="testing123"></div>
+
+
+
+<script src="script.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $.getJSON('test.json',function(data){
+            $.each(data,function(i,itemset){
+		$('#testing123').append(
+			'<p>Title:' +itemset.title+ '</p>' +
+			'<p>Author:' +itemset.author+ '</p>' +
+			'<p>File URL:' +itemset.file_urls+ '</p>'
+			);
+		$.each(itemset.files,function(i,files){
+			$('#testing123').append(
+				'<p>URL:' +files.url+ '</p>' +
+				'<p>Path:' +files.path+ '</p>' +
+				'<p>Checksum:' +files.checksum+ '</p>'
+			);
+			$.each(files.color_values,function(i,color_values){
+				$('#testing123').append('<p>'+i+':'+color_values+'</p>');
+			});
+		});
+                $('#testing123').append(
+			'<img src=' +itemset.file_urls+ ' alt="' +itemset.title+ '" style="width:400px">'
+			);
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+</script>
+
