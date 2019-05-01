@@ -1,3 +1,11 @@
+## 190501
+- new server up and running!!
+- using AWS EC2 with the free credit time. it's not clear how much the free portion covers
+- setting up webserver after moving was super easy. just needed to get ssh keys setup for git and server, and install docker
+- success jquery and javascript are outputting the correct html
+- failed filtering doesn't see jquery applied attributes for colors
+- might have something to do with active and static lists
+
 ## 190426
 - server is out of time
 - moving the webserver and html/css/js to the github folder
