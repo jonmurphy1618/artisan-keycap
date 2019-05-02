@@ -1,30 +1,42 @@
 //find all divs with attribute data-color over cutoff value
 var color_cutoff = 0;
-//var alls = document.querySelectorAll('.filter-all');
 var alls = document.getElementsByClassName('filter-all');
-var white = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-white")) > color_cutoff; });
-var black = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-black")) > color_cutoff; });
-var gray = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-gray")) > color_cutoff; });
-var red = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-red")) > color_cutoff; });
-var orange = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-orange")) > color_cutoff; });
-var brown = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-brown")) > color_cutoff; });
-var yellow = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-yellow")) > color_cutoff; });
-var green = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-green")) > color_cutoff; });
-var turquoise = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-turquoise")) > color_cutoff; });
-var blue = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-blue")) > color_cutoff; });
-var lilac = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-lilac")) > color_cutoff; });
-var pink = $('.filter-all').filter(function() { return parseInt($(this).attr("data-filter-pink")) > color_cutoff; });
+var white = [];
+var black = [];
+var black = [];
+var gray = [];
+var red = [];
+var orange = [];
+var brown = [];
+var yellow = [];
+var green = [];
+var turquoise = [];
+var blue = [];
+var lilac = [];
+var pink = [];
 
-console.log(alls); //debug
-console.log($(alls).filter(function() { return $(this).attr("data-filter-gray"); })); //debug
-
+function parse_colors() {
+    white = $(alls).filter(function() { return parseInt($(this).attr("data-filter-white")) > color_cutoff; });
+    black = $(alls).filter(function() { return parseInt($(this).attr("data-filter-black")) > color_cutoff; });
+    gray = $(alls).filter(function() { return parseInt($(this).attr("data-filter-gray")) > color_cutoff; });
+    red = $(alls).filter(function() { return parseInt($(this).attr("data-filter-red")) > color_cutoff; });
+    orange = $(alls).filter(function() { return parseInt($(this).attr("data-filter-orange")) > color_cutoff; });
+    brown = $(alls).filter(function() { return parseInt($(this).attr("data-filter-brown")) > color_cutoff; });
+    yellow = $(alls).filter(function() { return parseInt($(this).attr("data-filter-yellow")) > color_cutoff; });
+    green = $(alls).filter(function() { return parseInt($(this).attr("data-filter-green")) > color_cutoff; });
+    turquoise = $(alls).filter(function() { return parseInt($(this).attr("data-filter-turquoise")) > color_cutoff; });
+    blue = $(alls).filter(function() { return parseInt($(this).attr("data-filter-blue")) > color_cutoff; });
+    lilac = $(alls).filter(function() { return parseInt($(this).attr("data-filter-lilac")) > color_cutoff; });
+    pink = $(alls).filter(function() { return parseInt($(this).attr("data-filter-pink")) > color_cutoff; });
+    }
 
 // execute the function and show all pictures
-filterSelection('all')
+filterSelection('all');
 
 // adjust display based on color button selection
 function filterSelection(c) {
   if (c == 'all') {
+    parse_colors(); //needs to be run after the script loads images to the page
     filterSelection('none');
     for (var i = 0; i < alls.length; ++i) {
       alls[i].style.display = 'inline-block';

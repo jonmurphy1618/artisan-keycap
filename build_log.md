@@ -1,3 +1,13 @@
+## 190503
+- add try/except to colorscan so all images get values
+
+## 190502
+- success button filters are now working with json data added with jquery, the filter had to run after the jquery loaded data to the page
+- removed all the debug prints, removed excess comments, removed temp images used for testing
+- todo finalize the colortag script to add default 0 values if image can't be scanned
+- todo finalize the scrapper to pull more images
+- todo finalize the css so the page looks nice
+
 ## 190501
 - new server up and running!!
 - using AWS EC2 with the free credit time. it's not clear how much the free portion covers
