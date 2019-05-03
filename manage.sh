@@ -19,16 +19,23 @@ case "$1" in
 	edit)
 		nano ./artisan/spiders/app.py
 		;;
-	# processes the scraped information and applies the color tags to each item
-		# input file: ./output/test.json
-		# output: updated ./output/test.json
+	scrape_posts)
+		docker build --tag=artisan .
+		docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan scrapy crawl posts -o ./output/test.json
+		echo "posts and images data from website saved to ./output/test.json"
+		;;
 	colorscan)
+		#docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan python3 colorscan.py
 		python3 colorscan.py
-		echo "./output/test.json was updated"
+		echo "./output/test.json was updated with color tags and saved to ./webhost/www/test.json"
 		;;
 	webhost)
 		docker run -d --mount type=bind,source="$(pwd)"/webhost/www,target=/srv -p 2019:2015 abiosoft/caddy
 		echo "website is live" #list ip and port
+		;;
+	update)
+		./manage.sh scrape_posts
+		./manage.sh colorscan
 		;;
 	*)
 		error_report

@@ -1,6 +1,7 @@
-from PIL import Image
+1from PIL import Image
 import colorsys
 import os
+#import jsonlines
 import json
 
 def color_tag_image (image_file):
@@ -64,15 +65,13 @@ def color_tag_image (image_file):
 
 
 
-
-
 with open('./output/test.json', 'r') as jsonfile:
-        data = json.load(jsonfile)
+    data = json.load(jsonfile)
 
 for itemset in data:
     for fileinfo in itemset.get('files'):
         print (color_tag_image('./output/' + fileinfo.get('path')))
         fileinfo['color_values'] = color_tag_image('./output/' + fileinfo.get('path'))
 
-with open('./output/test.json', 'w') as jsonfile:
+with open('./webhost/www/test.json', 'w') as jsonfile:
     json.dump(data, jsonfile)
