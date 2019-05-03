@@ -1,5 +1,5 @@
 //find all divs with attribute data-color over cutoff value
-var color_cutoff = 0;
+var color_cutoff = 100;
 var alls = document.getElementsByClassName('filter-all');
 var white = [];
 var black = [];

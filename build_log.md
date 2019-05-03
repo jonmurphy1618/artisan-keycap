@@ -1,5 +1,7 @@
 ## 190503
 - add try/except to colorscan so all images get values
+- fixed colorscan.py to add 0 color values for failed images
+- 
 
 ## 190502
 - success button filters are now working with json data added with jquery, the filter had to run after the jquery loaded data to the page
