@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
-<!--  <link rel="stylesheet" href="styles.css">
--->
+  <link rel="stylesheet" href="styles.css">
   <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 
@@ -23,20 +22,6 @@
   <button class="btn" onclick="filterSelection('pink')"> Pink</button>
 </div>
 
-<!--
-<div id="testing123">
-<div class="filter-all" data-filter-white=71>
-    <img src="https://i.imgur.com/VrGH7IW.jpg" alt="title" style="height: 200px"></img>
-</div>
-
-<div class="filter-all" data-filter-black=80>
-    <img src="https://i.imgur.com/gexhRqf.jpg" alt="title2" style="height: 200px"></img>
-</div>
-</div>
--->
-
-
-
 <div id="testing123"></div>
 
 <script type="text/javascript">
@@ -45,10 +30,10 @@
             $.each(data,function(itemset_index,itemset){
                 $('#testing123').append(
 			'<div class="filter-all" id="tile_num_' +itemset_index+ '">' +
+                        '<img src=' +itemset.file_urls+ ' alt="' +itemset.title+ '" style= "width: 100%">' +
 			'<p>Title:' +itemset.title+ '</p>' +
                         '<p>Author:' +itemset.author+ '</p>' +
                         '<p>File URL:' +itemset.file_urls+ '</p>' +
-                        '<img src=' +itemset.file_urls+ ' alt="' +itemset.title+ '" style="width:200px">' +
 			'</div>'
                         );
                 $.each(itemset.files,function(i,files){

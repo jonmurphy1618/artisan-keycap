@@ -1,3 +1,7 @@
+## 190506
+- css edited to look acceptable
+- 
+
 ## 190503
 - add try/except to colorscan so all images get values
 - fixed colorscan.py to add 0 color values for failed images
