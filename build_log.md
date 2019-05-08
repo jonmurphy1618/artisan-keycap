@@ -1,6 +1,16 @@
+## 190507
+- moved the python colorscan scripy into a docker env for running tests
+- added pillow and jsonlines to dockerfile
+- updated the colorscan.py to use jsonlines file import
+- failed export to json file
+- server crashed and required restart
+- server crash again, maybe out of memory since docker and json and image processing are done in memory
+- todo check aws logs if available
+- todo change data processing from batch to line by line
+- 
+
 ## 190506
 - css edited to look acceptable
-- 
 
 ## 190503
 - add try/except to colorscan so all images get values

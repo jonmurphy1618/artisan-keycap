@@ -8,9 +8,9 @@ from artisan.items import FileItem
 class spider_link(scrapy.Spider):
 	name = "posts"
 	start_urls = [
-		#'https://old.reddit.com/r/ArtisanMacro/top/?sort=top&t=week',
-		#'https://old.reddit.com/r/ArtisanMacro/top/?sort=top&t=year&count=25&after=t3_93bssr',
-		'https://old.reddit.com/r/ArtisanMacro/top/?sort=top&t=year'
+		'https://old.reddit.com/r/ArtisanMacro/top/?sort=top&t=week',
+#		'https://old.reddit.com/r/ArtisanMacro/top/?sort=top&t=year&count=25&after=t3_93bssr',
+#		'https://old.reddit.com/r/ArtisanMacro/top/?sort=top&t=year'
 		]
 
 	def parse(self, response):

@@ -3,9 +3,12 @@
 error_report() {
 	echo "
 	manage.sh commands are:
-	bash	starts docker in bash mode
-	edit	opens app.py in nano
-	help	displays this message
+	bash
+	edit
+	scrape_posts
+	colorscan
+	webhost
+	update
 "
 }
 
@@ -21,12 +24,13 @@ case "$1" in
 		;;
 	scrape_posts)
 		docker build --tag=artisan .
-		docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan scrapy crawl posts -o ./output/test.json
+		docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan scrapy crawl posts -o ./output/test.jl
 		echo "posts and images data from website saved to ./output/test.json"
 		;;
 	colorscan)
-		#docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan python3 colorscan.py
-		python3 colorscan.py
+		docker build --tag=artisan .
+		docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan pypy3 colorscan.py
+		#python3 colorscan.py
 		echo "./output/test.json was updated with color tags and saved to ./webhost/www/test.json"
 		;;
 	webhost)

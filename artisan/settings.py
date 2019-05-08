@@ -93,4 +93,4 @@ FILES_STORE = './output'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-#FEED_FORMAT = "json lines"
+FEED_FORMAT = "json lines"
