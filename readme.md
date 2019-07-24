@@ -19,15 +19,15 @@ cd artisan
 ```
 
 ## Usage
-The following command will launch the scraper and host as a docker background process.
-`./manage.sh update`
+The following command will launch the scraper and host as a docker background process.  
+`./manage.sh update`  
 The update command will scrape posts from urls provided in `artisan/artisan/spiders/app.py` 
 and save the output data to `artisan/output/test.json` & images to `artisan/output/full/`.  
 
 After the webscape is done. The `colorscan.py` script is called which processed the images for colorvalues
 and appends the data to `test.json`.  
 
-`./manage.sh webhost`
+`./manage.sh webhost`  
 The webhost command activates a Caddy local webhost on port 2019.
 
 ## Dependencies
