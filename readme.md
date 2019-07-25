@@ -7,6 +7,7 @@ TBD lessons learned and closeout documents
 
 ![GIF showing the website in action!](gif.gif)  
 
+![IMG showing the tiles in detail](img.png)
 
 ## Installation
 Debian 9 (stretch):
