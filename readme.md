@@ -35,7 +35,7 @@ The threshold for an image being showing under a color tab can be adjusted.
 Open `nano ./webhost/www/script.js` and edit `var color_cutoff = 100;`. Higher values are more strict.  
 
 Image sources can be added or removed from the scraper.  
-Open `nano ./artisan/spiders/app.py` and edit `start_urls = [<url>]`. <url> is the full http reddit web address.
+Open `nano ./artisan/spiders/app.py` and edit `start_urls = [<url>]`. `<url>` is the full http reddit web address.
 
 ## Dependencies
 - Docker
