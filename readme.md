@@ -1,5 +1,9 @@
 # Artisan Keycap Website
-This is a website hosting artisan keycap images that can be filtered by color. The web scraper pulls data from the subreddit /r/artisanmacro, processes the images for colors, and applies tags for filtering.
+This is a website hosting artisan keycap images that can be filtered by color. The web scraper pulls data from the subreddit /r/artisanmacro, processes the images for colors, and applies tags for filtering.  
+
+Checkout the [project plan](project_plan.md) documentation for additional info.  
+Checkout the [log](build_log.md) for day by day notes.  
+TBD lessons learned and closeout documents
 
 ![GIF showing the website in action!](gif.gif)  
 
