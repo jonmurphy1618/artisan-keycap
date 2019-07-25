@@ -25,7 +25,7 @@ case "$1" in
 	scrape_posts)
 		docker build --tag=artisan .
 		docker run -it --rm --mount type=bind,source="$(pwd)",target=/app artisan scrapy crawl posts -o ./output/test.jl
-		echo "posts and images data from website saved to ./output/test.json"
+		echo "posts and images data from website saved to ./output/test.jl"
 		;;
 	colorscan)
 		docker build --tag=artisan .
