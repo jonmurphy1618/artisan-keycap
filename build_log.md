@@ -1,3 +1,10 @@
+## 190725
+- moved project folder into home git repo
+- cleaned up a lot of leftover files
+- removed all the output files from the git repo
+- .gitignore added. removed output files and python cache files
+- made a gif to showoff the site in the readme
+
 ## 190507
 - moved the python colorscan scripy into a docker env for running tests
 - added pillow and jsonlines to dockerfile
@@ -7,7 +14,6 @@
 - server crash again, maybe out of memory since docker and json and image processing are done in memory
 - todo check aws logs if available
 - todo change data processing from batch to line by line
-- 
 
 ## 190506
 - css edited to look acceptable
@@ -106,8 +112,7 @@
 ## 190308
 - setup github repo with plans to self host with gitea in the future
 - need to do documentation today. need a readme, change file formats to markdown, need week 1 report
-- unrelated to project, i really want to start my dotfiles repo so maybe i'll do that today
-- 
+- unrelated to project, i really want to start my dotfiles repo so maybe i'll do that today 
 
 ## 190307
 - scrapy crawl posts -t json -o ./"%(time)s.json"
