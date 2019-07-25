@@ -3,3 +3,6 @@ output/full/
 
 # ignore python cache
 **/__pycache__
+
+# ignore swap files
+*.swp
